@@ -3,79 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptomecenas - NFT Art Collection</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> <!-- Link to Raleway font -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Link to Font Awesome for icons -->
+    <title>Cryptomecenas - Decentralized Research Funding NFT Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* off-white */
+            color: #000000; /* black */
+        }
+        header {
+            background-color: #000000; /* black */
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff; /* white */
+        }
+        header img {
+            width: 150px; /* adjust as needed */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .main-content p {
+            margin-bottom: 20px;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .photo {
+            margin: 10px;
+        }
+        footer {
+            background-color: #000000; /* black */
+            color: #ffffff; /* white */
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header id="header">
-        <nav class="navbar">
-            <div class="logo">Cryptomecenas</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#gallery">Explore Collection</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#buy">Buy NFTs</a></li>
-            </ul>
-        </nav>
+    <header>
+        <img src="cryptomecenas_logo.png" alt="Cryptomecenas Logo">
     </header>
-
-    <section id="hero" class="hero">
-        <!-- Full-width hero banner with slideshow of featured artworks -->
-        <!-- Include JavaScript for slideshow functionality -->
-    </section>
-
-    <section id="gallery" class="gallery">
-        <!-- Filterable, responsive gallery grid -->
-        <!-- Include JavaScript for filtering functionality and hover effects -->
-    </section>
-
-    <section id="about" class="about">
-        <!-- About section -->
-        <div class="container">
-            <h2>About Cryptomecenas</h2>
-            <!-- Description of Cryptomecenas -->
+    <div class="container">
+        <div class="main-content">
+            <h1>Cryptomecenas</h1>
+            <p>Decentralized solution for research funding. A dynamic NFT platform which has attributes varying based on the type of research supported, and price adjusted by prediction markets data feeds.</p>
         </div>
-    </section>
-
-    <section id="artists" class="artist-spotlight">
-        <!-- Artist Spotlight section -->
-        <div class="container">
-            <h2>Artist Spotlight</h2>
-            <!-- Information about featured artists -->
-        </div>
-    </section>
-
-    <section id="why-collect" class="why-collect">
-        <!-- Why Collect NFTs section -->
-        <div class="container">
-            <h2>Why Collect NFTs?</h2>
-            <!-- Benefits of owning digital art -->
-        </div>
-    </section>
-
-    <footer id="footer" class="footer">
-        <!-- Simple yet striking footer -->
-        <div class="container">
-            <div class="footer-content">
-                <div class="company-info">
-                    <div class="logo">Cryptomecenas</div>
-                    <p>Decentralized solution for research funding</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <form action="#" class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
+        <div class="photos">
+            <!-- Add your photos here -->
+            <div class="photo">
+                <img src="photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
             </div>
         </div>
+    </div>
+    <footer>
+        &copy; 2024 Cryptomecenas. All rights reserved.
     </footer>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file for interactive features -->
 </body>
 </html>
+
