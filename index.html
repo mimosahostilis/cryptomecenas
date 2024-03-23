@@ -3,54 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your NFT Collection</title>
+    <title>Cryptomecenas - NFT Art Collection</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> <!-- Link to Raleway font -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Link to Font Awesome for icons -->
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Your NFT Collection</div>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">Cryptomecenas</div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">NFT Collection</a></li>
-                <li><a href="#">Causes Supported</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#gallery">Explore Collection</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#buy">Buy NFTs</a></li>
             </ul>
-            <div class="burger">
-                <i class="fas fa-bars"></i> <!-- Font Awesome icon for burger menu -->
-            </div>
         </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <h1>Your NFT Collection</h1>
-                <p>Funding Research & Supporting Public Goods</p>
-                <a href="#" class="cta-btn">Explore Now</a>
-            </div>
-        </div>
     </header>
-    <section class="featured-nfts">
-        <h2>Featured NFTs</h2>
-        <!-- Featured NFT cards go here -->
+
+    <section id="hero" class="hero">
+        <!-- Full-width hero banner with slideshow of featured artworks -->
+        <!-- Include JavaScript for slideshow functionality -->
     </section>
-    <section class="mission">
-        <h2>Our Mission</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada libero nec felis pretium, ut accumsan lacus maximus.</p>
+
+    <section id="gallery" class="gallery">
+        <!-- Filterable, responsive gallery grid -->
+        <!-- Include JavaScript for filtering functionality and hover effects -->
     </section>
-    <!-- Other sections such as About Us, NFT Collection, Auctions, etc. -->
-    
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Your NFT Collection. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-twitter"></i></a> <!-- Font Awesome icon for Twitter -->
-                <a href="#"><i class="fab fa-facebook-f"></i></a> <!-- Font Awesome icon for Facebook -->
-                <a href="#"><i class="fab fa-instagram"></i></a> <!-- Font Awesome icon for Instagram -->
+
+    <section id="about" class="about">
+        <!-- About section -->
+        <div class="container">
+            <h2>About Cryptomecenas</h2>
+            <!-- Description of Cryptomecenas -->
+        </div>
+    </section>
+
+    <section id="artists" class="artist-spotlight">
+        <!-- Artist Spotlight section -->
+        <div class="container">
+            <h2>Artist Spotlight</h2>
+            <!-- Information about featured artists -->
+        </div>
+    </section>
+
+    <section id="why-collect" class="why-collect">
+        <!-- Why Collect NFTs section -->
+        <div class="container">
+            <h2>Why Collect NFTs?</h2>
+            <!-- Benefits of owning digital art -->
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <!-- Simple yet striking footer -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-info">
+                    <div class="logo">Cryptomecenas</div>
+                    <p>Decentralized solution for research funding</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
     </footer>
 
-    <script src="app.js"></script> <!-- Link to your JavaScript file for interactive features -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file for interactive features -->
 </body>
 </html>
