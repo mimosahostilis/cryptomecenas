@@ -1,53 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptomecenas</title>
+    <title>Cryptomecenas - Decentralized Research Funding NFT Marketplace</title>
     <style>
-        :root {
-            --tropical-green: #0D625E;
-            --tropical-blue: #1FBFB8;
-            --tropical-yellow: #FEFCBF;
-            --tropical-red: #FF5A5F;
-        }
         body {
-            background-color: var(--tropical-green);
-            color: var(--tropical-yellow);
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* off-white */
+            color: #000000; /* black */
+        }
+        header {
+            background-color: #000000; /* black */
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff; /* white */
+        }
+        header img {
+            width: 150px; /* adjust as needed */
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
-        img {
-            max-width: 100%;
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
         }
-        h1, h2 {
-            color: var(--tropical-blue);
+        .main-content p {
+            margin-bottom: 20px;
         }
-        a {
-            color: var(--tropical-red);
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .photo {
+            margin: 10px;
+        }
+        footer {
+            background-color: #000000; /* black */
+            color: #ffffff; /* white */
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <img src="logo.png" alt="Logo Cryptomecenas"> <!-- Substitua 'logo.png' pelo caminho real da sua imagem de logo -->
-    
-    <h1>Cryptomecenas</h1>
-
-    <p>Solução descentralizada para financiamento de pesquisas. Uma plataforma NFT dinâmica que tem atributos variando com base no tipo de pesquisa apoiada, e preço ajustado por feeds de dados de mercados de previsão.</p>
-
-    <h2>Links</h2>
-
-    <ul>
-        <li><a href="https://sepolia.scrollscan.com/address/0x343187Eabf8B9EcF726FF6b5Bc9dFE2ee5837488#code" target="_blank">Coleção</a></li>
-        <li><a href="https://sepolia.scrollscan.com/address/0x0c8ffC64C7AAB0EDDbADE00627f1D114045A2c69" target="_blank">Token</a></li>
-    </ul>
-</div>
-
+    <header>
+        <img src="cryptomecenas_logo.png" alt="Cryptomecenas Logo">
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <h1>Cryptomecenas</h1>
+            <p>Decentralized solution for research funding. A dynamic NFT platform which has attributes varying based on the type of research supported, and price adjusted by prediction markets data feeds.</p>
+        </div>
+        <div class="photos">
+            <!-- Add your photos here -->
+            <div class="photo">
+                <img src="photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Cryptomecenas. All rights reserved.
+    </footer>
 </body>
 </html>
