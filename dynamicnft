@@ -1,0 +1,68 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
+
+contract DynamicNFT is ERC721, ChainlinkClient {
+    using Chainlink for Chainlink.Request;
+
+    address private oracle;
+    bytes32 private jobId;
+    uint256 private fee;
+
+    // Mapping from token ID to token URI
+    mapping (uint256 => string) private _tokenURIs;
+
+    constructor(address _oracle, string memory _jobId, uint256 _fee, address _link) ERC721("DynamicNFT", "DNFT") {
+        if (_link == address(0)) {
+            setPublicChainlinkToken();
+        } else {
+            setChainlinkToken(_link);
+        }
+        oracle = _oracle;
+        jobId = stringToBytes32(_jobId);
+        fee = _fee;
+    }
+
+    function mint(address to, uint256 tokenId) public {
+        _mint(to, tokenId);
+        Chainlink.Request memory req = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
+        sendChainlinkRequestTo(oracle, req, fee);
+    }
+
+    function fulfill(bytes32 _requestId, bytes32 _result) public recordChainlinkFulfillment(_requestId) {
+        string memory result = bytes32ToString(_result);
+        _setTokenURI(1, result);
+    }
+
+    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
+        _tokenURIs[tokenId] = _tokenURI;
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        return _tokenURIs[tokenId];
+    }
+
+    function stringToBytes32(string memory source) private pure returns (bytes32 result) {
+        bytes memory tempEmptyStringTest = bytes(source);
+        if (tempEmptyStringTest.length == 0) {
+            return 0x0;
+        }
+        assembly {
+            result := mload(add(source, 32))
+        }
+    }
+
+    function bytes32ToString(bytes32 _bytes32) private pure returns (string memory) {
+        uint8 i = 0;
+        while(i < 32 && _bytes32[i] != 0) {
+            i++;
+        }
+        bytes memory bytesArray = new bytes(i);
+        for(i = 0; i < 32 && _bytes32[i] != 0; i++) {
+            bytesArray[i] = _bytes32[i];
+        }
+        return string(bytesArray);
+    }
+}
