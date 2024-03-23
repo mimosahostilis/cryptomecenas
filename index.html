@@ -17,18 +17,35 @@
             padding: 20px 0;
             text-align: center;
             color: #ffffff; /* white */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
         }
         header img {
             width: 150px; /* adjust as needed */
         }
+        nav {
+            background-color: #343a40; /* dark gray */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff; /* white */
+            text-decoration: none;
+            margin: 0 10px;
+        }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 100px auto 20px auto;
             padding: 0 20px;
         }
         .main-content {
             text-align: center;
             margin-top: 50px;
+        }
+        .main-content h2 {
+            margin-bottom: 30px;
         }
         .main-content p {
             margin-bottom: 20px;
@@ -57,22 +74,38 @@
     <header>
         <img src="cryptomecenas_logo.png" alt="Cryptomecenas Logo">
     </header>
-    <div class="container">
+    <nav>
+        <a href="#homepage">Homepage</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#featured">Featured NFTs</a>
+        <a href="#mission">Mission Statement</a>
+        <a href="#cta">Call to Action</a>
+    </nav>
+    <div class="container" id="homepage">
         <div class="main-content">
-            <h1>Cryptomecenas</h1>
-            <p>Decentralized solution for research funding. A dynamic NFT platform which has attributes varying based on the type of research supported, and price adjusted by prediction markets data feeds.</p>
+            <h1>Welcome to Cryptomecenas</h1>
+            <h2>Decentralized Research Funding NFT Marketplace</h2>
+            <p>Introduction: A captivating header that introduces your NFT collection and its mission to fund research and public goods. Use engaging visuals and concise, compelling language to immediately capture visitors' attention.</p>
         </div>
-        <div class="photos">
-            <!-- Add your photos here -->
+        <div class="photos" id="featured">
+            <!-- Showcase your featured NFTs here -->
             <div class="photo">
-                <img src="photo1.jpg" alt="Photo 1">
+                <img src="featured_nft1.jpg" alt="Featured NFT 1">
             </div>
             <div class="photo">
-                <img src="photo2.jpg" alt="Photo 2">
+                <img src="featured_nft2.jpg" alt="Featured NFT 2">
             </div>
             <div class="photo">
-                <img src="photo3.jpg" alt="Photo 3">
+                <img src="featured_nft3.jpg" alt="Featured NFT 3">
             </div>
+        </div>
+        <div class="main-content" id="mission">
+            <h2>Mission Statement</h2>
+            <p>Cryptomecenas is dedicated to funding research and public initiatives through the sale of unique NFTs. Our mission is to harness the power of the community to drive positive change by supporting groundbreaking research and projects that benefit society as a whole.</p>
+        </div>
+        <div class="main-content" id="cta">
+            <h2>Call to Action</h2>
+            <p>Explore our collection, participate in auctions, and join us in making a difference. Together, we can drive innovation and create a better future for all.</p>
         </div>
     </div>
     <footer>
