@@ -21,6 +21,23 @@
         header img {
             width: 150px; /* adjust as needed */
         }
+        .hero-banner {
+            background-image: url('your_hero_image.jpg');
+            background-position: left;
+            background-size: cover;
+            padding: 50px;
+        }
+        .hero-content {
+            position: relative;
+        }
+        .hero-content p {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.2;
+        }
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -60,8 +77,14 @@
 </head>
 <body>
     <header>
-        <img src="Logotipo Cryptomecenas.svg" alt="Cryptomecenas Logo">
+        <img src="Sem nome (4252 x 3307 px) (Adesivo retangular (paisagem)).png" alt="Cryptomecenas Logo">
     </header>
+    <div class="hero-banner">
+        <div class="hero-content">
+            <p>Tropical research</p>
+            <p>Decolonizing Future</p>
+        </div>
+    </div>
     <div class="container">
         <div class="main-content">
             <p>A decentralized solution for research funding. A dynamic NFT platform which has attributes varying based on the type of research supported, and price adjusted by prediction markets data feeds.</p>
