@@ -41,6 +41,11 @@
         }
         .photo {
             margin: 10px;
+            flex: 0 0 calc(33.33% - 20px); /* Adjust width to fit three photos side by side with margin */
+        }
+        .photo img {
+            max-width: 100%;
+            height: auto;
         }
         footer {
             background-color: #000000; /* black */
@@ -55,7 +60,7 @@
 </head>
 <body>
     <header>
-        <img src="Sem nome (4252 x 3307 px) (Adesivo retangular (paisagem)).png" alt="Cryptomecenas Logo">
+        <img src="Logotipo Cryptomecenas.svg" alt="Cryptomecenas Logo">
     </header>
     <div class="container">
         <div class="main-content">
@@ -72,13 +77,13 @@
             <div class="photo">
                 <img src="Default_Cryptomecenas_tropical_black_curvy_women_with_green_ha_1.jpg" alt="Photo 3">
             </div>
-              <div class="photo">
+            <div class="photo">
                 <img src="Default_Cryptomecenas_tropical_light_skin_brown_women_1.jpg" alt="Photo 4">
-                      </div>
-              <div class="photo">
+            </div>
+            <div class="photo">
                 <img src="Default_Cryptomecenas_tropical_iorub_candombl_worship_0.jpg.jpg" alt="Photo 5">
             </div>
-              <div class="photo">
+            <div class="photo">
                 <img src="Default_Cryptomecenas_tropical_light_skin_black_woman_rubber_0.jpg" alt="Photo 6">
             </div>
         </div>
